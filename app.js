@@ -34,9 +34,14 @@ $(document).ready(function(){
   $('.sentences li:first-child').addClass('current');
 
   $('.opt-continue').click(function() {
+    current_sentece++;
     console.log('current:' + current_sentece + ' total:' + total_sentences);
     if(current_sentece < total_sentences)
-    next();
+      next();
+    else {
+      $('.pratice').attr('hidden','');
+      //$('.final').attr('','');
+    }
 
   });
 
